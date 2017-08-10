@@ -33,6 +33,12 @@ xapi_lrs:
     type: orm
     object_manager_service: doctrine.orm.entity_manager
 ```
+- update the routing.yml
+```
+xapi_lrs:
+    resource: "@XApiLrsBundle/Resources/config/routing.xml"
+    prefix: /lrs
+```
 
 There are still issues with the current version of this bundle requesting classes from dependencies which have removed them (documented in php-xapi/lrs-bundle/CHANGELOG.md).
 
