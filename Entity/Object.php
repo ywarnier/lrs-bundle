@@ -7,9 +7,6 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Statement
- *
- * @ORM\Table(name="lrs_object", indexes={@ORM\Index(name="idx_lrs_object", columns={"id"})})
- * @ORM\Entity
  */
 abstract class Object
 {
