@@ -26,31 +26,31 @@ class Statement
      * @ORM\ManyToOne(targetEntity="XApi\LrsBundle\Entity\Verb", inversedBy="verbs", cascade={"persist"})
      * @ORM\JoinColumn(name="verb_id", referencedColumnName="id")
      */
-    private $verbId;
+    //private $verbId;
 
     /**
      * @ORM\ManyToOne(targetEntity="XApi\LrsBundle\Entity\Actor", inversedBy="actors", cascade={"persist"})
      * @ORM\JoinColumn(name="actor_id", referencedColumnName="id")
      */
-    private $actorId;
+    //private $actorId;
 
     /**
      * @ORM\ManyToOne(targetEntity="XApi\LrsBundle\Entity\Object", inversedBy="objects", cascade={"persist"})
      * @ORM\JoinColumn(name="object_id", referencedColumnName="id")
      */
-    private $objectId;
+    //private $objectId;
 
     /**
      * @ORM\ManyToOne(targetEntity="XApi\LrsBundle\Entity\Result", inversedBy="results", cascade={"persist"})
      * @ORM\JoinColumn(name="result_id", referencedColumnName="id")
      */
-    private $resultId;
+    //private $resultId;
 
     /**
      * @ORM\ManyToOne(targetEntity="XApi\LrsBundle\Entity\Authority", inversedBy="authorities", cascade={"persist"})
      * @ORM\JoinColumn(name="authority_id", referencedColumnName="id")
      */
-    private $authorityId;
+    //private $authorityId;
 
     /**
      * @var \DateTime
@@ -80,7 +80,7 @@ class Statement
      *      inverseJoinColumns={@ORM\JoinColumn(name="attachment_id", referencedColumnName="id")}
      * )
      */
-    protected $attachments;
+    //protected $attachments;
 
     /**
      * Set Verb Id
