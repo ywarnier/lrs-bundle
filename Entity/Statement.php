@@ -47,10 +47,11 @@ class Statement
     private $resultId;
 
     /**
-     * @ORM\ManyToOne(targetEntity="XApi\LrsBundle\Entity\Authority", inversedBy="authorities", cascade={"persist"})
-     * @ORM\JoinColumn(name="authority_id", referencedColumnName="id")
+     * @var string
+     *
+     * @ORM\Column(name="authority", type="text", nullable=true)
      */
-    private $authorityId;
+    private $authority;
 
     /**
      * @var \DateTime
@@ -75,7 +76,7 @@ class Statement
 
     /**
      * @ORM\ManyToMany(targetEntity="XApi\LrsBundle\Entity\Attachment")
-     * @ORM\JoinTable(name="statement_rel_attachment",
+     * @ORM\JoinTable(name="lrs_statement_rel_attachment",
      *      joinColumns={@ORM\JoinColumn(name="statement_id", referencedColumnName="id")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="attachment_id", referencedColumnName="id")}
      * )
