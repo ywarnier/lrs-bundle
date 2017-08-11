@@ -9,7 +9,7 @@ use Doctrine\ORM\Mapping as ORM;
  * Statement
  *
  * @ORM\Table(name="lrs_statement", indexes={@ORM\Index(name="idx_lrs_statement", columns={"id"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="LrsBundle\Repository\StatementRepository")
  */
 class Statement
 {
