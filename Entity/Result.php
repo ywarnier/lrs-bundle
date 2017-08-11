@@ -65,7 +65,7 @@ final class Result
      *      inverseJoinColumns={@ORM\JoinColumn(name="extension_id", referencedColumnName="id")}
      * )
      */
-    protected $extensions;
+    //protected $extensions;
 
     /**
      * @param Score|null      $score
