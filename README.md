@@ -32,6 +32,9 @@ To setup, you will need to:
 xapi_lrs:
     type: orm
     object_manager_service: doctrine.orm.entity_manager
+easy_admin:
+    entities:
+      - XApi\LrsBundle\Entity\Statement
 ```
 - update the routing.yml
 ```
