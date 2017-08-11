@@ -1,15 +1,9 @@
 <?php
-
-/*
- * This file is part of the xAPI package.
- *
- * (c) Christian Flothmann <christian.flothmann@xabbuh.de>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
- */
+/* For licensing terms, see /license.txt */
 
 namespace XApi\LrsBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
 
 /**
  * An {@link Actor Actor's} outcome related to the {@link Statement} in which
