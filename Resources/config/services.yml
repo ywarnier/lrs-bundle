@@ -1,0 +1,22 @@
+# Learn more about services, parameters and containers at
+# https://symfony.com/doc/current/service_container.html
+parameters:
+    #parameter_name: value
+
+services:
+    xapi_lrs.doctrine.class_metadata:
+        class: Doctrine\ORM\Mapping\ClassMetadata
+        factory: ['@doctrine.orm.entity_manager', getClassMetadata]
+        arguments:
+            - XApi\LrsBundle\Entity\Statement
+
+    xapi_lrs.repository.mapped_statement:
+        class: XApi\Repository\ORM\StatementRepository
+        arguments:
+            - '@doctrine.orm.default_entity_manager'
+            - '@xapi_lrs.doctrine.class_metadata'
+
+    xapi_lrs.repository.statement:
+        class: XApi\Repository\Doctrine\Repository\StatementRepository
+        arguments:
+            - '@xapi_lrs.repository.mapped_statement'
