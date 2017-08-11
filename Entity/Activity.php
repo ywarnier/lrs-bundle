@@ -4,6 +4,7 @@
 namespace XApi\LrsBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use XApi\LrsBundle\Model\Object;
 
 /**
  * Statement
