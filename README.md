@@ -37,6 +37,11 @@ To setup, you will need to:
 xapi_lrs:
     type: orm
     object_manager_service: doctrine.orm.entity_manager
+```
+To enable a visual administrator for the entities, you can (optionally) enable
+the easy_admin bundle (which you _will_ have to install additionally), adding
+this extra section to config.yml:
+```
 easy_admin:
     entities:
       - XApi\LrsBundle\Entity\Statement
