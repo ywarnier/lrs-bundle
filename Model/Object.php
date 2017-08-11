@@ -1,7 +1,7 @@
 <?php
 /* For licensing terms, see /license.txt */
 
-namespace XApi\LrsBundle\Entity;
+namespace XApi\LrsBundle\Model;
 
 use Doctrine\ORM\Mapping as ORM;
 
