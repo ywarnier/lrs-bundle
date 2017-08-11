@@ -56,14 +56,14 @@ class Statement
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="created", type="datetime", nullable=true)
+     * @ORM\Column(name="created_at", type="datetime", nullable=true)
      */
     private $created;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="stored", type="datetime", nullable=true)
+     * @ORM\Column(name="stored_at", type="datetime", nullable=true)
      */
     private $stored;
 
