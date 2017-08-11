@@ -38,13 +38,13 @@ class Statement
      * @ORM\ManyToOne(targetEntity="XApi\LrsBundle\Entity\Object", inversedBy="objects", cascade={"persist"})
      * @ORM\JoinColumn(name="object_id", referencedColumnName="id")
      */
-    private $objectId;
+    //private $objectId;
 
     /**
      * @ORM\ManyToOne(targetEntity="XApi\LrsBundle\Entity\Result", inversedBy="results", cascade={"persist"})
      * @ORM\JoinColumn(name="result_id", referencedColumnName="id")
      */
-    private $resultId;
+    //private $resultId;
 
     /**
      * @var string
