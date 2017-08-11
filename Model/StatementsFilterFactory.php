@@ -54,7 +54,7 @@ class StatementsFilterFactory
         if (($registration = $parameters->get('registration')) !== null) {
             $filter->byRegistration($registration);
         }
-
+        /*
         if ($parameters->filter('related_activities', false, FILTER_VALIDATE_BOOLEAN)) {
             $filter->enableRelatedActivityFilter();
         } else {
@@ -65,7 +65,7 @@ class StatementsFilterFactory
             $filter->enableRelatedAgentFilter();
         } else {
             $filter->disableRelatedAgentFilter();
-        }
+        }*/
 
         if (($since = $parameters->get('since')) !== null) {
             $filter->since(\DateTime::createFromFormat(\DateTime::ATOM, $since));
@@ -75,13 +75,13 @@ class StatementsFilterFactory
             $filter->until(\DateTime::createFromFormat(\DateTime::ATOM, $until));
         }
 
-        if ($parameters->filter('ascending', false, FILTER_VALIDATE_BOOLEAN)) {
+        /*if ($parameters->filter('ascending', false, FILTER_VALIDATE_BOOLEAN)) {
             $filter->ascending();
         } else {
             $filter->descending();
         }
 
-        $filter->limit($parameters->getInt('limit'));
+        $filter->limit($parameters->getInt('limit'));*/
 
         return $filter;
     }
