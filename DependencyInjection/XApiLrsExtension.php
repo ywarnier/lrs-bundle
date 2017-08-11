@@ -15,6 +15,7 @@ use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Extension\Extension;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
+use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
 
 /**
  * @author Christian Flothmann <christian.flothmann@xabbuh.de>
@@ -27,6 +28,7 @@ final class XApiLrsExtension extends Extension
         $config = $this->processConfiguration($configuration, $configs);
 
         $loader = new XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
+        $loaderYml = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
 
         $loader->load('controller.xml');
         $loader->load('event_listener.xml');
@@ -44,11 +46,12 @@ final class XApiLrsExtension extends Extension
                 $container->setAlias('xapi_lrs.repository.statement', 'xapi_lrs.repository.statement.doctrine');
                 break;
             case 'orm':
-                $loader->load('doctrine.xml');
-                $loader->load('orm.xml');
+                //$loader->load('doctrine.xml');
+                //$loader->load('orm.xml');
+                $loaderYml->load('services.yml');
 
                 $container->setAlias('xapi_lrs.doctrine.object_manager', $config['object_manager_service']);
-                $container->setAlias('xapi_lrs.repository.statement', 'xapi_lrs.repository.statement.doctrine');
+                //$container->setAlias('xapi_lrs.repository.statement', 'xapi_lrs.repository.statement.doctrine');
                 break;
         }
     }
