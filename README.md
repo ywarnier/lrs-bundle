@@ -34,6 +34,18 @@ To setup, you will need to:
 ```
 - update the config.yml (or config_dev.yml)
 ```
+orm:
+    auto_generate_proxy_classes: '%kernel.debug%'
+    entity_managers:
+        MyMappings:
+            mappings:
+                // your mappings here
+                LrsBundle:
+                    mapping: true
+                    type: xml
+                    dir: '%kernel.root_dir%/../vendor/php-xapi/repository-doctrine-orm/metadata'
+                    is_bundle: false
+                    prefix: XApi\Repository\Doctrine\Mapping
 xapi_lrs:
     type: orm
     object_manager_service: doctrine.orm.entity_manager
