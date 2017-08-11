@@ -10,11 +10,17 @@ To setup, you will need to:
         {
             "type": "vcs",
             "url": "https://github.com/php-xapi/lrs-bundle"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/php-xapi/repository-doctrine-orm"
         }
     ],
     "require": {
         ...,
-        "php-xapi/lrs-bundle": "0.1.x-dev"
+        "php-xapi/lrs-bundle": "0.1.x-dev",
+        "php-xapi/repository-doctrine-orm": "dev-master"
+
     }
 ```
 (replace php-xapi by your own user if you have forked the project)
