@@ -44,14 +44,15 @@ class Statement
      * @ORM\ManyToOne(targetEntity="XApi\LrsBundle\Entity\Result", inversedBy="results", cascade={"persist"})
      * @ORM\JoinColumn(name="result_id", referencedColumnName="id")
      */
-    //private $resultId;
+    private $resultId;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="authority", type="text", nullable=true)
+     * Authority is an Agent or a Group
+     * @ORM\ManyToOne(targetEntity="XApi\LrsBundle\Entity\Agent", inversedBy="agents", cascade={"persist"})
+     * @ORM\JoinColumn(name="authority_id", referencedColumnName="id")
+     * @todo find how to possibly include groups here
      */
-    private $authority;
+    private $authorityId;
 
     /**
      * @var \DateTime

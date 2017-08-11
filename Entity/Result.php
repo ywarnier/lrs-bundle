@@ -15,39 +15,63 @@ namespace XApi\LrsBundle\Entity;
  * An {@link Actor Actor's} outcome related to the {@link Statement} in which
  * it is included.
  *
- * @author Christian Flothmann <christian.flothmann@xabbuh.de>
+ * @ORM\Table(name="lrs_result", indexes={@ORM\Index(name="idx_lrs_result", columns={"id"})})
+ * @ORM\Entity
  */
 final class Result
 {
     /**
-     * @var Score The score
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="score", type="text", nullable=true)
      */
     private $score;
 
     /**
-     * @var bool Indicates whether or not the attempt was successful
+     * @var string
+     *
+     * @ORM\Column(name="success", type="text", nullable=true)
      */
     private $success;
 
     /**
-     * @var bool Indicates whether or not the Activity was completed
+     * @var string
+     *
+     * @ORM\Column(name="completion", type="text", nullable=true)
      */
     private $completion;
 
     /**
-     * @var string A response for the given Activity
+     * @var string
+     *
+     * @ORM\Column(name="response", type="text", nullable=true)
      */
     private $response;
 
     /**
-     * @var string Period of time over which the Activity was performed
+     * @var string
+     *
+     * @ORM\Column(name="duration", type="text", nullable=true)
      */
     private $duration;
 
     /**
-     * @var Extensions|null Extensions associated with this result
+     * @ORM\ManyToMany(targetEntity="XApi\LrsBundle\Entity\Extensions")
+     * @ORM\JoinTable(name="lrs_result_rel_extensions",
+     *      joinColumns={@ORM\JoinColumn(name="result_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@ORM\JoinColumn(name="extension_id", referencedColumnName="id")}
+     * )
      */
-    private $extensions;
+    protected $extensions;
 
     /**
      * @param Score|null      $score
