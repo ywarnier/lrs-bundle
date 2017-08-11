@@ -23,7 +23,8 @@
         "php-xapi/serializer": "^1.0 || ^2.0",
         "php-xapi/symfony-serializer": "^1.0 || ^2.0",
         "symfony/dependency-injection": "^2.7 || ^3.1",
-        "symfony/http-kernel": "^2.7 || ^3.1"
+        "symfony/http-kernel": "^2.7 || ^3.1",
+        "php-xapi/repository-doctrine-orm": "dev-master"
     },
     "require-dev": {
         "phpspec/phpspec": "~2.3",
