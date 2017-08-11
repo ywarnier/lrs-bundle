@@ -32,7 +32,10 @@ To setup, you will need to:
             new XApi\LrsBundle\XApiLrsBundle(),
         ];
 ```
-- update the config.yml (or config_dev.yml)
+- update the config.yml (or config_dev.yml), the "orm" section enabling the
+mapping of entities in repository-doctrine-orm with the required entites in this
+bundle (MyMappings and LrsBundle terms should be customized), and the xapi_lrs 
+section enabling the link to Doctrine:
 ```
 orm:
     auto_generate_proxy_classes: '%kernel.debug%'
