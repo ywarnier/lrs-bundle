@@ -8,12 +8,12 @@ services:
         class: Doctrine\ORM\Mapping\ClassMetadata
         factory: ['@doctrine.orm.entity_manager', getClassMetadata]
         arguments:
-            - XApi\LrsBundle\Entity\Statement
+            - XApi\Repository\Doctrine\Mapping\Statement
 
     xapi_lrs.repository.mapped_statement:
         class: XApi\Repository\ORM\StatementRepository
         arguments:
-            - '@doctrine.orm.default_entity_manager'
+            - '@doctrine.orm.entity_manager'
             - '@xapi_lrs.doctrine.class_metadata'
 
     xapi_lrs.repository.statement:
