@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Xabbuh\XApi\Model;
+namespace XApi\LrsBundle\Entity;
 
 /**
  * An {@link Actor Actor's} outcome related to the {@link Statement} in which
