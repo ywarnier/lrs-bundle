@@ -15,6 +15,12 @@
             "homepage": "https://github.com/Lctrs"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/php-xapi/repository-doctrine-orm"
+        }
+    ],
     "require": {
         "php-xapi/exception": "^0.1",
         "php-xapi/model": "^1.1 || ^2.0",
